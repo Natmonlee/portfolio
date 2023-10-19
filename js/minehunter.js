@@ -200,9 +200,7 @@ class MinesweeperGrid extends Grid {
     }
 
     checkIfCompleted() {
-        console.log(this._revealedTiles, this._nonMineArray.length);
         if (this._revealedTiles >= this._nonMineArray.length) {
-            console.log("you win!")
             resultDiv.innerHTML = "You win!<br><button class='clickableButton' id='button'>Play Again?</button>";
             document.getElementById('button').addEventListener("click", replay);
             gridContainer.style.pointerEvents = "none";
