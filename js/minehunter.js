@@ -44,7 +44,7 @@ class MinesweeperTile {
     }
 
     explode() {
-        document.getElementById(this._divId).innerHTML = '<img src="./images/explosion.png"/>';
+        document.getElementById(this._divId).innerHTML = '<img src="./images/minehunter/explosion.png"/>';
         document.getElementById(this._divId).classList.add("exploded");
     }
 };
@@ -142,7 +142,7 @@ class MinesweeperGrid extends Grid {
                 else if (tile._adjacentMines) {
                     clickEvent = () => {
                         document.getElementById(tile._divId).innerHTML = tile._adjacentMines;
-                        document.getElementById(tile._divId).style.backgroundImage = "url(./images/dirt.jpg)";
+                        document.getElementById(tile._divId).style.backgroundImage = "url(./images/minehunter/dirt.jpg)";
                         tile._revealed = true;
                         document.getElementById(tile._divId).classList.remove("clickable");
                         this._revealedTiles += 1;
@@ -161,7 +161,7 @@ class MinesweeperGrid extends Grid {
                 document.getElementById(tile._divId).addEventListener("click", clickEvent);
                 document.getElementById(tile._divId).addEventListener("contextmenu", () => {
                     if (!tile._revealed) {
-                        document.getElementById(tile._divId).innerHTML = '<img src="./images/flag.png"/>';
+                        document.getElementById(tile._divId).innerHTML = '<img src="./images/minehunter/flag.png"/>';
                         document.getElementById(tile._divId).style.pointerEvents = "auto";
                     }
                 })
@@ -177,11 +177,11 @@ class MinesweeperGrid extends Grid {
     }
 
     exposeEmptyAdjacents(tile) {
-        document.getElementById(tile._divId).style.backgroundImage = "url(./images/dirt.jpg)";
+        document.getElementById(tile._divId).style.backgroundImage = "url(./images/minehunter/dirt.jpg)";
         document.getElementById(tile._divId).innerHTML = "";
         this.findAdjacentTiles(tile).forEach(adjacentTile => {
             if (!adjacentTile._adjacentMines && !adjacentTile._mine && !adjacentTile._revealed) {
-                document.getElementById(adjacentTile._divId).style.backgroundImage = "url(./images/dirt.jpg)";
+                document.getElementById(adjacentTile._divId).style.backgroundImage = "url(./images/minehunter/dirt.jpg)";
                 adjacentTile._revealed = true;
                 document.getElementById(adjacentTile._divId).classList.remove("clickable");
                 this._revealedTiles += 1;
@@ -189,7 +189,7 @@ class MinesweeperGrid extends Grid {
                 this.exposeEmptyAdjacents(adjacentTile);
             }
             else if (adjacentTile._adjacentMines && !adjacentTile._mine && !adjacentTile._revealed) {
-                document.getElementById(adjacentTile._divId).style.backgroundImage = "url(./images/dirt.jpg)";
+                document.getElementById(adjacentTile._divId).style.backgroundImage = "url(./images/minehunter/dirt.jpg)";
                 adjacentTile._revealed = true;
                 document.getElementById(adjacentTile._divId).classList.remove("clickable");
                 this._revealedTiles += 1;
