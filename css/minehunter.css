@@ -12,7 +12,7 @@ body {
   margin: 0;
 }
 
-#outerContainer {
+.page {
   display: flex;
   height: 100%;
   flex-direction: column;
@@ -20,7 +20,7 @@ body {
   row-gap: 15px;
 }
 
-#navbarOuter {
+.nav-container {
   background-image: url(../images/minehunter/background.jpg);
   position: fixed;
   width: 100%;
@@ -29,7 +29,7 @@ body {
   top: 0;
 }
 
-#navbar {
+.nav {
   position: fixed;
   width: 100%;
   display: flex;
@@ -41,14 +41,14 @@ body {
   background-color: rgba(8, 84, 8, 0.84);
 }
 
-#icon {
+.logo {
   display: flex;
   margin-left: 10px;
   margin-right: 30px;
   cursor: default;
 }
 
-#navbar img {
+.nav img {
   height: 40px;
   width: 40px;
   padding-top: 5px;
@@ -126,7 +126,7 @@ h1 {
   position: relative;
 }
 
-#instructionsDiv {
+#instructions {
   background-color: rgba(35, 139, 17, 0.703);
   padding: 10px;
   border: 2px solid rgb(16, 48, 0);
@@ -144,7 +144,7 @@ ul {
   margin-block-end: 5px;
 }
 
-#gridContainer {
+#grid {
   display: grid;
   cursor: url(../images/minehunter/cursor.cur), auto;
   gap: 2px;
@@ -276,12 +276,12 @@ img {
   overflow-y: hidden;
 }
 
-.col1 {
+.label {
   grid-column: 1;
   justify-self: flex-start;
 }
 
-.col2 {
+.input {
   grid-column: 2;
   justify-self: flex-end;
 }
@@ -291,11 +291,11 @@ img {
   margin-right: 18px;
 }
 
-#percentageSign {
+.input-unit {
   grid-column: 3;
 }
 
-footer {
+.footer {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -304,12 +304,12 @@ footer {
   margin-top: auto;
 }
 
-footer div {
+.footer div {
   margin-left: 5px;
   margin-right: 5px;
 }
 
-footer a {
+.footer a {
   color: rgb(0, 32, 0);
 }
 

@@ -10,14 +10,14 @@
         <title>Mine Hunter</title>
     </head>
     <body>
-        <div id="outerContainer">
-            <div id="navbarOuter">
-                <div id="navbar">
-                    <div id="icon">
+        <div class="page">
+            <div class="nav-container">
+                <div class="nav">
+                    <div class="logo">
                         <p>M</p><img src="./images/minehunter/mine.png" />
                         <p>H</p>
                     </div>
-                    <div class="navItem highlight" id="gridMenu">
+                    <div class="nav-item highlight" id="gridMenu">
                         <p>New Game</p>
                         <div id="gridDropdown">
                             <button id="smallButton" class="highlight">Small Grid<br>8 x 8</button>
@@ -26,7 +26,7 @@
                             <button id="customButton" class="highlight">Create<br>Custom Grid</button>
                         </div>
                     </div>
-                    <a href="#instructionsDiv" id="instructionsButton" class="navItem highlight">
+                    <a href="#instructions" id="instructionsButton" class="nav-item highlight">
                         <div>
                             <p>Instructions</p>
                         </div>
@@ -38,9 +38,9 @@
                     <img src="./images/minehunter/mine.png" />Mine Hunter<img src="./images/minehunter/mine.png" />
                 </h1>
             </div>
-            <div id="gridContainer" class="hidden"></div>
+            <div id="grid" class="hidden"></div>
             <div id="result"></div>
-            <div id="instructionsDiv">
+            <div id="instructions">
                 <ul>
                     <li>Reveal every safe tile to win.</li>
                     <li>Avoid the mines!</li>
@@ -60,22 +60,19 @@
                     <div id="customBorder">
                         <form id="innerCustomSection">
                             <div id="closeButton"><button id="close">X</button></div>
-                            <div class="col1"><label for="row">Rows:</label></div>
-                            <div class="col2"><input class="box" type="number" name="row" id="row" min="1" required /></div>
-                            <div class="col1"><label for="column">Columns:</label></div>
-                            <div class="col2"><input class="box" type="number" name="column" id="column" min="1" required />
-                            </div>
-                            <div class="col1"><label for="percent">Mines:</label></div>
-                            <div class="col2"><input class="box" type="number" name="percent" id="percent" min="1" max="99"
-                                    value="14" /></div>
-                            <div id="percentageSign">%</div>
-                            <div class="col123"><input type="submit" id="submit" class="clickableButton" value="Generate" />
-                            </div>
+                            <div class="label"><label for="row">Rows:</label></div>
+                            <div class="input"><input class="box" type="number" name="row" id="row" min="1" required /></div>
+                            <div class="label"><label for="column">Columns:</label></div>
+                            <div class="input"><input class="box" type="number" name="column" id="column" min="1" required /></div>
+                            <div class="label"><label for="percent">Mines:</label></div>
+                            <div class="input"><input class="box" type="number" name="percent" id="percent" min="1" max="99"value="14" /></div>
+                            <div class="input-unit">%</div>
+                            <div class="col123"><input type="submit" id="submit" class="clickableButton" value="Generate" /></div>
                         </form>
                     </div>
                 </div>
             </div>
-            <footer>
+            <footer class="footer">
                 <a href="https://www.freepik.com/icon/explode_7445281#fromView=search&term=bomb&page=1&position=85&track=ais&track=ais">
                     Explosion Icon by Umeicon
                 </a>
