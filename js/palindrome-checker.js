@@ -1,4 +1,4 @@
-import { Terminal } from 'xterm';
+import { Terminal } from 'https://unpkg.com/xterm@4.12.0/lib/xterm.js';
 
 const term = new Terminal();
 
